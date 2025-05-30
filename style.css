@@ -1,0 +1,832 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #f58220; /* Orange color */
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 8px;
+}
+
+.site-nav {
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #f58220;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    background-color: #f58220;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d46e00;
+}
+
+.contact-number {
+    font-weight: 600;
+    color: #555;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .site-nav {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Info Bar Styles */
+.info-bar {
+    background-color: #fff3e6;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0c27b;
+}
+
+.info-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-item {
+    text-align: center;
+    flex: 1 1 120px;
+}
+
+.info-number {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f58220;
+    display: block;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-bar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-item {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.consultation-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.consultation-form h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.consultation-form p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.consultation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consultation-form input[type="text"],
+.consultation-form input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.consultation-form label {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.consultation-form button.btn-primary {
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .consultation-form {
+        max-width: 100%;
+    }
+}
+
+/* Treatments Section Styles */
+.treatments-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.treatments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.treatments-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.treatments-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.treatment-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.treatment-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 350px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.treatment-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.treatment-card h3 {
+    margin-bottom: 10px;
+    color: #f58220;
+}
+
+.treatment-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: left;
+}
+
+.treatment-card ul li {
+    margin-bottom: 5px;
+}
+
+.treatment-card .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.treatment-card .btn-primary {
+    padding: 10px 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .treatment-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .treatment-card {
+        max-width: 100%;
+    }
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.testimonials-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-card {
+        max-width: 100%;
+    }
+}
+
+/* Why Choose Section Styles */
+.why-choose-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.why-choose-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-choose-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.why-choose-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.why-choose-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 400px;
+    color: #555;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.features-list li::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    color: #f58220;
+    font-weight: bold;
+}
+
+.why-choose-image img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .why-choose-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-list {
+        max-width: 100%;
+        text-align: center;
+    }
+    .why-choose-image img {
+        max-width: 100%;
+    }
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    color: #f58220;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0 0 10px;
+    color: #555;
+}
+
+/* Show answer when active */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-list {
+        max-width: 100%;
+    }
+}
+
+/* What Our Patients Say Section Styles */
+.patients-say-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.patients-say-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.patients-say-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.patients-say-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.patients-say-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.patients-say-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.patients-say-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.patients-say-card p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .patients-say-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .patients-say-card {
+        max-width: 100%;
+    }
+}
+
+/* Safety Section Styles */
+.safety-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.safety-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.safety-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.safety-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.safety-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.safety-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+}
+
+.safety-card h3 {
+    margin-bottom: 10px;
+    color: #f58220;
+}
+
+.safety-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #f58220;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .safety-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .safety-card {
+        max-width: 100%;
+    }
+}
+
+/* Google Reviews Section Styles */
+.google-reviews-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.google-reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.google-reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.google-review-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.google-review-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.google-rating {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f58220;
+    margin-bottom: 10px;
+}
+
+.google-review-card p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .google-review-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .google-review-card {
+        max-width: 100%;
+    }
+}
+
+/* Find Us Across India Section Styles */
+.find-us-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.find-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.find-us-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.find-us-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.clinic-locations {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.clinic-location {
+    background-color: #fff3e6;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.clinic-location h3 {
+    margin-bottom: 5px;
+    color: #f58220;
+}
+
+.clinic-location p {
+    margin: 0;
+    color: #555;
+}
+
+.clinic-images {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.clinic-images img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .clinic-locations {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clinic-location {
+        max-width: 100%;
+    }
+    .clinic-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clinic-images img {
+        max-width: 100%;
+    }
+}
+
+/* Promotional Banners Section Styles */
+.promotional-banners-section {
+    padding: 40px 20px;
+    background-color: #fff3e6;
+    color: #333;
+}
+
+.promotional-banners-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.banner-membership {
+    background-color: #f58220;
+    color: #fff;
+}
+
+.banner-membership h3,
+.banner-membership p {
+    color: #fff;
+}
+
+.banner-anniversary ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.banner-anniversary ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .promotional-banners-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner {
+        max-width: 100%;
+    }
+}

@@ -108,6 +108,28 @@ body {
     .nav-toggle {
         display: block;
     }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        z-index: 1001;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .header-actions {
+        display: none;
+    }
 }
 
 /* Info Bar Styles */
@@ -152,6 +174,87 @@ body {
     .info-item {
         flex: none;
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Treatments Section */
+    .treatment-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .treatment-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Patients Say Section */
+    .patients-say-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .patients-say-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Why Choose Section */
+    .why-choose-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-list {
+        max-width: 100%;
+        text-align: center;
+    }
+    .why-choose-image img {
+        max-width: 100%;
+    }
+
+    /* Appointment Section */
+    .appointment-container form {
+        flex-direction: column;
+    }
+    .appointment-container input,
+    .appointment-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Safety Section */
+    .safety-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .safety-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Google Reviews Section */
+    .google-review-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .google-review-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Find Us Section */
+    .clinic-locations {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clinic-location {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .clinic-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clinic-images img {
+        max-width: 100%;
         margin-bottom: 10px;
     }
 }
@@ -776,57 +879,34 @@ body {
     }
 }
 
-/* Promotional Banners Section Styles */
-.promotional-banners-section {
-    padding: 40px 20px;
-    background-color: #fff3e6;
-    color: #333;
-}
-
-.promotional-banners-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.banner {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 300px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* Footer Section Styles */
+.footer-section {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
 }
 
-.banner-membership {
-    background-color: #f58220;
-    color: #fff;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.banner-membership h3,
-.banner-membership p {
-    color: #fff;
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 0;
 }
 
-.banner-anniversary ul {
-    text-align: left;
-    padding-left: 20px;
+.footer-links li a {
+    color: #f58220;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.banner-anniversary ul li {
-    margin-bottom: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .promotional-banners-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .banner {
-        max-width: 100%;
-    }
+.footer-links li a:hover {
+    text-decoration: underline;
 }

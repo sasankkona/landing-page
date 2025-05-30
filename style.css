@@ -28,19 +28,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #f58220; /* Orange color */
+    gap: 8px;
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 8px;
+    height: 50px;
 }
 
 .site-nav {
@@ -51,13 +52,14 @@ body {
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 .nav-list li a {
     text-decoration: none;
     color: #333;
-    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -75,10 +77,10 @@ body {
     background-color: #f58220;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     transition: background-color 0.3s ease;
 }
 
@@ -87,8 +89,9 @@ body {
 }
 
 .contact-number {
-    font-weight: 600;
+    font-weight: 700;
     color: #555;
+    font-size: 1rem;
 }
 
 .nav-toggle {
@@ -143,9 +146,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 40px;
 }
 
 .info-item {
@@ -257,6 +260,16 @@ body {
         max-width: 100%;
         margin-bottom: 10px;
     }
+
+    /* Promotional Banners Section */
+    .promotional-banners-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner {
+        max-width: 100%;
+    }
 }
 
 /* Hero Section Styles */
@@ -274,10 +287,23 @@ body {
     flex-wrap: wrap;
 }
 
+.hero-image {
+    position: relative;
+    background-image: url('doctor background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    height: auto;
+}
+
 .hero-image img {
+    position: relative;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    z-index: 1;
 }
 
 .consultation-form {
